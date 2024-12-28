@@ -1,6 +1,6 @@
 from langchain_core.prompts import PromptTemplate
 
-# Old prompt enhancements
+# Old prompt enhancements not needed now:
 # - Improve prompt for Time Constraint
 # - Escape Special Characters: Escape ' with &#39; for values in the generated query.
 # - Some important facts related to query generation:

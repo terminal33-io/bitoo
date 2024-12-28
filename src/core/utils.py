@@ -13,5 +13,7 @@ def get_llm(callbacks=None, model_name=None):
         model_name=model_name,
         callbacks=callbacks,
         verbose=True,
-        model_kwargs={"seed": 1, "frequency_penalty": 0, "presence_penalty": 0},
+        seed=1,
+        frequency_penalty=0,
+        presence_penalty=0
     )
