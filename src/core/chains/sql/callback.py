@@ -6,9 +6,10 @@ from langchain_core.outputs import LLMResult
 
 
 class SqlCallbackHandler(AsyncCallbackHandler):
-    def __init__(self, chat_id, message_id):
-        self.chat_id = chat_id
-        self.message_id = message_id
+    def __init__(self):
+        pass
+        # self.chat_id = chat_id
+        # self.message_id = message_id
 
     async def on_llm_end(self, response: LLMResult, **kwargs: Any) -> None:
         generations = response.generations
