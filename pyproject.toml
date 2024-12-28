@@ -66,6 +66,7 @@ loguru = "^0.7.2"
 langchain-anthropic = "^0.3.0"
 langsmith = "^0.1.144"
 langchain-core = "^0.3.19"
+pymysql = "^1.1.1"
 
 [tool.poetry.extras]
 api = ["fastapi", "ddtrace", "json-logging", "PyYAML", "uvicorn"]

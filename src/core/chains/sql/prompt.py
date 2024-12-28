@@ -32,7 +32,8 @@ Question: {input}
 PROMPT = PromptTemplate(
     # examples=examples,
     # example_prompt=example_prompt,
-    prefix=_mysql_prompt,
-    suffix=PROMPT_SUFFIX,
+    template=_mysql_prompt+PROMPT_SUFFIX,
+    # prefix=_mysql_prompt,
+    # suffix=PROMPT_SUFFIX,
     input_variables=["input", "table_info", "top_k"],
 )

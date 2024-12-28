@@ -31,10 +31,6 @@ async def get():
 
 @app.post("/answer")
 async def stream_answer(request: StreamRequest):
-    # Call sql chain
-    # Call answer chain
-    # Invoke visualization Chain
-    # Invoke related questions chain
     return EventSourceResponse(answer_question(request.question))
 
 
@@ -45,4 +41,5 @@ if __name__ == "__main__":
         "chat:app",
         host="0.0.0.0",
         port=9090,
+        reload=True
     )
