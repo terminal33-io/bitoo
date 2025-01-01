@@ -6,8 +6,10 @@ from langchain_core.runnables import RunnablePassthrough
 from core.chains.answer_chain import get_answer_chain
 from core.chains.sql.sql_chain import get_query_chain
 from core.chains.sql.utils import get_db, extract_sql_query
+from langchain_core.tracers.context import tracing_v2_enabled
 
 
+# TODO: Handle cases where query execution fails
 async def answer_question(question: str):
     # invoke only query chain to see the query
     # both full chain with answer and query covered
@@ -27,6 +29,7 @@ async def answer_question(question: str):
         result=itemgetter("query") | QuerySQLDataBaseTool(db=db)
     ) | answer_chain)
 
-    stream = full_chain.astream({"question": question})
-    async for s in stream:
-        yield s
+    with tracing_v2_enabled():
+        stream = full_chain.astream({"question": question})
+        async for s in stream:
+            yield s

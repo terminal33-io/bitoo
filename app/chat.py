@@ -1,3 +1,4 @@
+import os
 from dotenv import load_dotenv
 from fastapi import FastAPI
 from sse_starlette import EventSourceResponse
@@ -21,6 +22,12 @@ app.add_middleware(
 
 @app.on_event("startup")
 async def startup_event():
+    
+    # print(f"LANGCHAIN_TRACING_V2: {os.getenv('LANGCHAIN_TRACING_V2')}")
+    # print(f"LANGCHAIN_PROJECT: {os.getenv('LANGCHAIN_PROJECT')}")
+    # print(f"LANGCHAIN_API_KEY: {os.getenv('LANGCHAIN_API_KEY')}")
+    # print(f"LANGCHAIN_API_KEY exists: {'LANGCHAIN_API_KEY' in os.environ}")
+
     print("Startup event finished - Application is ready to receive requests.")
 
 
