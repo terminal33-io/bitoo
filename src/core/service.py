@@ -3,9 +3,9 @@ from operator import itemgetter
 from langchain_community.tools import QuerySQLDataBaseTool
 from langchain_core.runnables import RunnablePassthrough
 
-from core.chains.answer_chain import get_answer_chain
-from core.chains.sql.sql_chain import get_query_chain
-from core.chains.sql.utils import get_db, extract_sql_query
+from src.core.chains.answer_chain import get_answer_chain
+from src.core.chains.sql.sql_chain import get_query_chain
+from src.core.chains.sql.utils import get_db, extract_sql_query
 from langchain_core.tracers.context import tracing_v2_enabled
 
 
