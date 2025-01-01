@@ -3,8 +3,8 @@ from langchain_core.prompts import (
     PromptTemplate,
 )
 
-from core.constants import ChatMessage
-from core.utils import get_llm
+from src.core.constants import ChatMessage
+from src.core.utils import get_llm
 
 _template = """You are an AI trained in Retail Store Data. Given the following user question, corresponding SQL query, SQL result provide a concise answer 
 to the user's question.

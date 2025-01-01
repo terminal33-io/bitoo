@@ -1,6 +1,6 @@
-from core.chains.sql.callback import SqlCallbackHandler
-from core.chains.sql.prompt import PROMPT
-from core.utils import get_llm
+from src.core.chains.sql.callback import SqlCallbackHandler
+from src.core.chains.sql.prompt import PROMPT
+from src.core.utils import get_llm
 from langchain.chains.sql_database.query import create_sql_query_chain
 
 
