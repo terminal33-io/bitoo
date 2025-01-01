@@ -4,7 +4,7 @@ from fastapi import FastAPI
 from sse_starlette import EventSourceResponse
 from starlette.middleware.cors import CORSMiddleware
 
-from core.service import answer_question
+from src.core.service import answer_question
 from src.core.schemas import StreamRequest
 from app.config import cors_settings, settings
 
