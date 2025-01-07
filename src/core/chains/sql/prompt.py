@@ -1,4 +1,9 @@
+from datetime import datetime
+from core.chains.sql.utils import get_current_financial_year
 from langchain_core.prompts import PromptTemplate
+
+current_fy = get_current_financial_year()
+prefix = f"Today;s date is {datetime.now()} and Current Financial Year is {current_fy}"
 
 # Old prompt enhancements not needed now:
 # - Improve prompt for Time Constraint
@@ -32,7 +37,7 @@ Question: {input}
 PROMPT = PromptTemplate(
     # examples=examples,
     # example_prompt=example_prompt,
-    template=_mysql_prompt+PROMPT_SUFFIX,
+    template=prefix+_mysql_prompt+PROMPT_SUFFIX,
     # prefix=_mysql_prompt,
     # suffix=PROMPT_SUFFIX,
     input_variables=["input", "table_info", "top_k"],
