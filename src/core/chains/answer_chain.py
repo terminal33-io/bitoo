@@ -14,7 +14,7 @@ SQL Result: {result}
 
 Use the following guidelines to answer the question:
 - Keep the tone conversational and friendly.
-- Format numbers into readable currency format as per Indian Rupees. Ceil the numbers to the nearest integer. Use crores and lakhs for large numbers.
+- Format numbers into readable currency format as per Indian Rupees. Ceil the numbers to the nearest integer. Use crores(1e7) and lakhs(1e5) for large numbers.
 - Format dates into readable format as per Indian Standard Time.
 - Analyse the result data and try to provide a trend or analysis if possible.
 - Provide suggestions on similar questoions related to the question asked.
