@@ -18,6 +18,7 @@ Use the following guidelines to answer the question:
    - Use `ceil` to round up to the nearest integer.
    - Convert amounts ≥ 1,00,00,000 (1e7) to Crores and amounts ≥ 1,00,000 (1e5) but < 1,00,00,000 to Lakhs.
    - Otherwise, keep amounts in normal rupees format.
+   - Donot make error in this conversion, this is very important.
 3. Format dates into readable format as per Indian Standard Time.
 4. Analyse the result data and try to provide a trend or analysis if possible.
 5. Provide suggestions on similar questoions related to the question asked.
